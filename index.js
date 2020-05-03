@@ -1,9 +1,13 @@
 const questionSection = document.getElementById('section-b');
 const startQuizBtn = document.getElementById('section-a');
 const eachQuestion = document.getElementById('question');
-
+const nextBtn = document.getElementsByClassName('next');
 //
 startQuizBtn.addEventListener('click', startQuiz);
+
+function restart() {
+    location.reload();
+}
 
 function startQuiz() {
     startQuizBtn.classList.add('hide');
@@ -32,7 +36,7 @@ let questionsAnswered;
 let questionsCounter = 0;
 
 function choose(element) {
-    
+
     for (let i = 0; i < questions.length; i++) {
         if (element.id == questions[i].answer) {
             element.classList.remove('options');
@@ -44,6 +48,7 @@ function choose(element) {
 
             scoreCounter += 2;
             score = document.getElementById('s-c').innerHTML = 'Total Score Obtained: ' + scoreCounter;
+
 
             break;
         } else {
@@ -66,10 +71,18 @@ function choose(element) {
     }
 }
 
+function unlock() {
+    document.getElementById("next").style.display = "block";
+    nextBtn.disabled = false;
+}
+
 function next() {
-    questionsCounter += 1;
-    questionsAnswered = document.getElementById('q-c').innerHTML = 'Total Questions Answered: ' + questionsCounter + '/' + questions.length;
-    quizBody(questionsCounter);
+        if (questionsCounter < questions.length - 1) {
+            questionsCounter += 1;
+            questionsAnswered = document.getElementById('q-c').innerHTML = 'Total Questions Answered: ' + questionsCounter + '/' + questions.length;
+            console.log(questionsCounter);
+            quizBody(questionsCounter);
+        }
 
     document.getElementById('0').classList.remove('correct', 'wrong', 'disabled');
     document.getElementById('0').classList.add('options');
@@ -84,12 +97,6 @@ function next() {
     document.getElementById('3').classList.add('options');
 }
 
-function previous() {
-    questionsCounter -= 1;
-    
-    questionsAnswered = document.getElementById('q-c').innerHTML = 'Total Questions Answered: ' + questionsCounter + '/' + questions.length;
-    quizBody(questionsCounter);
-}
 
 //list of questions to display
 let questions = [
