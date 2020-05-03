@@ -12,7 +12,7 @@ function startQuiz() {
     startQuizBtn.classList.add('hide');
     questionSection.classList.remove('hide');
     quizBody(questionsCounter);
-    
+
 }
 
 function restartQuiz() {
@@ -53,38 +53,15 @@ let questionsCounter = 0;
 
 function choose(element) {
 
-    for (let i = 0; i <= questions.length; i++) {
-        if (element.id == questions[i].answer) {
-            element.classList.remove('options');
-            element.classList.add('correct');
-
-
-            document.getElementById(0).classList.add('disabled');
-            document.getElementById(1).classList.add('disabled');
-            document.getElementById(2).classList.add('disabled');
-            nextBtn.classList.remove('hide');
-
-            scoreCounter += 6;
+    for (let i = 0; i < questions.length; i++) {
+        if (questionsCounter == i && element.id == questions[i].answer) {
+            scoreCounter += 5;
             score = document.getElementById('s-c').innerHTML = 'Score: ' + scoreCounter;
-
-            break;
         } else {
             element.classList.remove('options');
             element.classList.add('wrong');
 
-            document.getElementById(0).classList.add('disabled');
-
-            document.getElementById(1).classList.add('disabled');
-
-            document.getElementById(2).classList.add('disabled');
-
-            document.getElementById(3).classList.add('disabled');
-
-            nextBtn.classList.remove('hide');
-
             score = document.getElementById('s-c').innerHTML = 'Score: ' + scoreCounter;
-
-            break;
         }
     }
     lockOptions();
@@ -93,41 +70,46 @@ function choose(element) {
 function lockOptions() {
     for (let i = 0; i < options.length; i++) {
         options[i].classList.add('disabled');
+        nextBtn.classList.remove('hide');
         if (options[i].id == questions[questionsCounter].answer) {
+
             options[i].classList.add('correct');
+            options[i].classList.remove('wrong');
         }
     }
 }
 
 function quizOver() {
     questionSection.classList.add('hide');
-    
+
     document.getElementById('quiz-over').classList.remove('hide');
-    if (scoreCounter <= 15) {
-    quizOverText1.innerHTML = 'Nice Try!';
-    quizOverText2.innerHTML = 'You Got ' + scoreCounter;
-    } else if (scoreCounter <= 25) {
+    if (scoreCounter <= 10) {
+        quizOverText1.innerHTML = 'Nice Try!';
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter;
+    } else if (scoreCounter <= 20) {
         quizOverText1.innerHTML = 'Brilliant!';
         quizOverText2.innerHTML = 'You Got ' + scoreCounter;
     } else {
         quizOverText1.innerHTML = 'Just Like A Boss!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter;}
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter;
+    }
 }
+
 function next() {
+
     if (questionsCounter == questions.length - 1) {
         quizOver();
         scoreCounter = 0;
     }
-        else if (questionsCounter < questions.length - 1) {
-            
-            nextBtn.classList.add('hide');
-            questionsCounter += 1;
-            console.log(questionsCounter);
-            quizBody(questionsCounter);
-            
-        }
+    else if (questionsCounter < questions.length - 1) {
 
-        
+        nextBtn.classList.add('hide');
+        questionsCounter += 1;
+        quizBody(questionsCounter);
+
+    }
+
+
 
     document.getElementById('0').classList.remove('correct', 'wrong', 'disabled');
     document.getElementById('0').classList.add('options');

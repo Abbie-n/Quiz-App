@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(16, 7, 70);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1em;
+    overflow: hidden;
+}
+
+header {
+    margin-top: 5%;
+    text-align: center;
+}
+p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#section-b {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+    border-radius: 20px;
+    background-color: rgb(226, 229, 240);
+    color: black;
+}
+#main-quiz-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.counters {
+    display: grid;
+    grid-template-columns: 2fr 0.3fr;
+}
+.quiz-btn {
+    display: grid;
+    grid-template-columns: 2fr 0.3fr;
+}
+
+button {
+    cursor: pointer;
+    padding: 1.5em;
+    width: 110px;
+    background-color: rgb(57, 57, 165);
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: rgb(75, 75, 192);
+}
+
+#section-b >* {
+    padding: 1em;
+}
+#section-a {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: center;
+    padding: 30px 30px 30px 30px;
+    background-color: rgb(226, 229, 240);
+    border-radius: 10px;
+ }
+
+ #quiz-over {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    text-align: center;
+    color: black;
+    padding: 20px;
+    background-color: rgb(226, 229, 240);
+    border-radius: 10px;
+ }
+
+ #over-text {
+     margin-bottom: 20px;
+ }
+
+ #try-again {
+     margin-right: 20px;
+ }
+.hide {
+    display: none;
+}
+
+.options {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: black;
+    background-color: rgb(182, 170, 224);
+    padding: 20px;
+    border-radius: 10px;
+}
+.options:hover {
+    cursor: pointer;
+    background-color: rgb(193, 193, 218);
+}
+
+
+.correct {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: rgb(11, 197, 11);
+    color: white;
+}
+.wrong {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: rgb(226, 19, 19);
+    color: white;
+}
+
+.disabled {
+    font-size: 1.5rem;
+    padding: 20px;
+    pointer-events: none;
+}
