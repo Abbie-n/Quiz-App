@@ -85,13 +85,13 @@ function quizOver() {
     document.getElementById('quiz-over').classList.remove('hide');
     if (scoreCounter <= 10) {
         quizOverText1.innerHTML = 'Nice Try!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter;
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
     } else if (scoreCounter <= 20) {
         quizOverText1.innerHTML = 'Brilliant!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter;
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
     } else {
         quizOverText1.innerHTML = 'Just Like A Boss!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter;
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
     }
 }
 

@@ -136,4 +136,15 @@ and
     body {
         overflow: scroll;
     }
+    #main-quiz-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .quiz-btn button {
+        width: 80px;
+    }
+    .quiz-over-btn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
