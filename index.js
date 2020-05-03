@@ -128,32 +128,32 @@ function next() {
 //list of questions to display
 let questions = [
     {
-        question: 'What country won the very first FIFA World Cup in 1930?',
+        question: 'About how many taste buds does the average human tongue have?',
         options: [
-            'Italy',
-            'Spain',
-            'Uruguay',
-            'France'
+            '2,000',
+            "300",
+            '10,000',
+            "50"
         ],
         answer: 2
     },
     {
-        question: 'What year was the very first model of the iPhone released?',
+        question: 'Which of the following programming language is used to create programs like applets?',
         options: [
-            '2001',
-            '2007',
-            '1998',
-            '2009'
+            'COBOL',
+            'Java',
+            'C',
+            'Basic'
         ],
         answer: 1
     },
     {
-        question: 'Which email service is owned by Microsoft?',
+        question: 'What country won the very first FIFA World Cup in 1930?',
         options: [
-            'Yahoomail',
-            'Gmail',
-            'Webmail',
-            'Hotmail'
+            'Germany',
+            'Italy',
+            'Spain',
+            'Uruguay'
         ],
         answer: 3
     },
