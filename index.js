@@ -86,7 +86,7 @@ function quizOver() {
     if (scoreCounter <= 1) {
         quizOverText1.innerHTML = 'Nice Try!';
         quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
-    } else if (scoreCounter <= 3) {
+    } else if (scoreCounter = 3) {
         quizOverText1.innerHTML = 'Brilliant!';
         quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
     } else {
