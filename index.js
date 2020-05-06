@@ -55,7 +55,7 @@ function choose(element) {
 
     for (let i = 0; i < questions.length; i++) {
         if (questionsCounter == i && element.id == questions[i].answer) {
-            scoreCounter += 5;
+            scoreCounter += 1;
             score = document.getElementById('s-c').innerHTML = 'Score: ' + scoreCounter;
         } else {
             element.classList.remove('options');
@@ -83,10 +83,10 @@ function quizOver() {
     questionSection.classList.add('hide');
 
     document.getElementById('quiz-over').classList.remove('hide');
-    if (scoreCounter <= 10) {
+    if (scoreCounter <= 1) {
         quizOverText1.innerHTML = 'Nice Try!';
         quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
-    } else if (scoreCounter <= 20) {
+    } else if (scoreCounter <= 3) {
         quizOverText1.innerHTML = 'Brilliant!';
         quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
     } else {
