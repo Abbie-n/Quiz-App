@@ -34,7 +34,7 @@ p {
 }
 .counters {
     display: grid;
-    grid-template-columns: 2fr 0.3fr;
+    grid-template-columns: 2fr 0.4fr;
 }
 .quiz-btn {
     display: grid;

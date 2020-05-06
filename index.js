@@ -41,7 +41,7 @@ function quizBody(index) {
     option = document.getElementById('2').innerHTML = 'C. ' + questions[index].options[2];
     option = document.getElementById('3').innerHTML = 'D. ' + questions[index].options[3];
 
-    questionsAnswered = document.getElementById('q-c').innerHTML = questionsCounter + 1 + '/' + questions.length;
+    questionsAnswered = document.getElementById('q-c').innerHTML = 'Question: ' + (questionsCounter + 1) + ' of ' + questions.length;
     score = document.getElementById('s-c').innerHTML = 'Score: ' + scoreCounter;
 }
 
@@ -83,10 +83,10 @@ function quizOver() {
     questionSection.classList.add('hide');
 
     document.getElementById('quiz-over').classList.remove('hide');
-    if (scoreCounter <= 1) {
+    if (scoreCounter <= 2) {
         quizOverText1.innerHTML = 'Nice Try!';
         quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
-    } else if (scoreCounter = 3) {
+    } else if (scoreCounter <= 4) {
         quizOverText1.innerHTML = 'Brilliant!';
         quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
     } else {
