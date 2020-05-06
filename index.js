@@ -41,7 +41,7 @@ function quizBody(index) {
     option = document.getElementById('2').innerHTML = 'C. ' + questions[index].options[2];
     option = document.getElementById('3').innerHTML = 'D. ' + questions[index].options[3];
 
-    questionsAnswered = document.getElementById('q-c').innerHTML = questionsCounter + '/' + questions.length;
+    questionsAnswered = document.getElementById('q-c').innerHTML = questionsCounter + 1 + '/' + questions.length;
     score = document.getElementById('s-c').innerHTML = 'Score: ' + scoreCounter;
 }
 
