@@ -8,13 +8,14 @@ const quizOverText2 = document.getElementById('over-text-2');
 //
 startQuizBtn.addEventListener('click', startQuiz);
 
+//function to reveal the quiz screen
 function startQuiz() {
     startQuizBtn.classList.add('hide');
     questionSection.classList.remove('hide');
     quizBody(questionsCounter);
 
 }
-
+//function to restart the quiz
 function restartQuiz() {
     document.getElementById('quiz-over').classList.add('hide');
     questionSection.classList.remove('hide');
@@ -29,6 +30,8 @@ function restart() {
 
 let question;
 let option;
+
+//function to add questions and options to the DOM
 function quizBody(index) {
 
 
@@ -51,6 +54,7 @@ let scoreCounter = 0;
 let questionsAnswered;
 let questionsCounter = 0;
 
+//onclick function to check if the answer is wrong or correct
 function choose(element) {
 
     for (let i = 0; i < questions.length; i++) {
@@ -67,6 +71,7 @@ function choose(element) {
     lockOptions();
 }
 
+//function to disable options when one has been clicked and to changed the color of the right answer to green even if the wrong answer was selected
 function lockOptions() {
     for (let i = 0; i < options.length; i++) {
         options[i].classList.add('disabled');
@@ -79,6 +84,7 @@ function lockOptions() {
     }
 }
 
+//function to give feedback when quiz is over
 function quizOver() {
     questionSection.classList.add('hide');
 
@@ -94,7 +100,7 @@ function quizOver() {
         quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' / ' + questions.length;
     }
 }
-
+//onclick function for the next button 
 function next() {
 
     if (questionsCounter == questions.length - 1) {
@@ -110,7 +116,7 @@ function next() {
     }
 
 
-
+    //these take the colour of the options back to start state.
     document.getElementById('0').classList.remove('correct', 'wrong', 'disabled');
     document.getElementById('0').classList.add('options');
 
