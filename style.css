@@ -59,7 +59,7 @@ hr {
 
 .quiz-btn {
     display: grid;
-    grid-template-columns: 2fr 0.37gtifr;
+    grid-template-columns: 2fr 0.37fr;
 }
 
 button {
