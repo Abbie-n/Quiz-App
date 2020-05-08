@@ -42,7 +42,7 @@ function quizBody(index) {
     option = document.getElementById('3').innerHTML = 'D. ' + questions[index].options[3];
 
     questionsAnswered = document.getElementById('q-c').innerHTML = 'Question: ' + (questionsCounter + 1) + ' of ' + questions.length;
-    score = document.getElementById('s-c').innerHTML = 'Score: ' + scoreCounter;
+    score = document.getElementById('s-c').innerHTML = scoreCounter;
 }
 
 let score;
@@ -56,12 +56,12 @@ function choose(element) {
     for (let i = 0; i < questions.length; i++) {
         if (questionsCounter == i && element.id == questions[i].answer) {
             scoreCounter += 1;
-            score = document.getElementById('s-c').innerHTML = 'Score: ' + scoreCounter;
+            score = document.getElementById('s-c').innerHTML = scoreCounter;
         } else {
             element.classList.remove('options');
             element.classList.add('wrong');
 
-            score = document.getElementById('s-c').innerHTML = 'Score: ' + scoreCounter;
+            score = document.getElementById('s-c').innerHTML = scoreCounter;
         }
     }
     lockOptions();
@@ -85,13 +85,13 @@ function quizOver() {
     document.getElementById('quiz-over').classList.remove('hide');
     if (scoreCounter <= 2) {
         quizOverText1.innerHTML = 'Nice Try!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' / ' + questions.length;
     } else if (scoreCounter <= 4) {
         quizOverText1.innerHTML = 'Brilliant!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' / ' + questions.length;
     } else {
         quizOverText1.innerHTML = 'Just Like A Boss!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter + '!';
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' / ' + questions.length;
     }
 }
 

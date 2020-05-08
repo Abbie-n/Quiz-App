@@ -10,43 +10,46 @@
 
 <body>
     <header class="header">
-        <h1>Awesome Quiz</h1>
+        <h1>Quizathon</h1>
     </header>
     <section id="section-a">
         <button class="start_game">Start Quiz</button>
     </section>
     <section id="section-b" class="hide">
         <div class="counters">
-        <div class="score-counter">
-            <p id="s-c"></p>
-        </div>
-        <div class="question-counter">
-            <p id="q-c"></p>
-        </div>
+            <div class="question-counter">
+                <p id="q-c"></p>
+            </div>
+
+            <hr>
+
+            <div class="score-counter">
+                <p>Score: <span id="s-c"></span></p>
+            </div>
         </div>
         <div>
             <p id="question"></p>
         </div>
 
         <div id="main-quiz-container">
-    
-        <div class="options" id="0" onclick="choose(this)"></div>
-        
-        <div class="options" id="1" onclick="choose(this)"></div>
-       
-        <div class="options" id="2" onclick="choose(this)"></div>
-        
-        <div class="options" id="3" onclick="choose(this)"></div>
-    </div>
 
-    <div class="quiz-btn">
-        <div class="restart">
-            <button type="reset" onclick="restart()">Home</button>
+            <div class="options" id="0" onclick="choose(this)"></div>
+
+            <div class="options" id="1" onclick="choose(this)"></div>
+
+            <div class="options" id="2" onclick="choose(this)"></div>
+
+            <div class="options" id="3" onclick="choose(this)"></div>
         </div>
 
-        <div class="submit-btn hide" id="next">
-            <button type="submit" onclick="next(this)">Next</button>
-        </div>
+        <div class="quiz-btn">
+            <div class="restart">
+                <button type="reset" onclick="restart()">Home</button>
+            </div>
+
+            <div class="submit-btn hide" id="next">
+                <button type="submit" onclick="next(this)">Next</button>
+            </div>
         </div>
     </section>
     <section id="section-c">
@@ -56,11 +59,11 @@
             <p id="over-text-2"></p>
             <br>
             <div class="quiz-over-btn">
-            <button id="try-again" onclick="restartQuiz()">Try Again</button>
-            <button onclick="restart()">Home</button>
+                <button id="try-again" onclick="restartQuiz()">Try Again</button>
+                <button onclick="restart()">Home</button>
             </div>
         </div>
-    
+
     </section>
     <script src="index.js"></script>
 </body>

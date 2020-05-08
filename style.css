@@ -2,16 +2,17 @@
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(16, 7, 70);
+    background-color: rgb(15, 15, 15);
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 1em;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 header {
     margin-top: 5%;
     text-align: center;
+    font-size: 30px;
 }
 p {
     font-size: 1.5rem;
@@ -19,11 +20,12 @@ p {
 }
 
 #section-b {
-    max-width: 1170px;
+    max-width: 900px;
+    min-height: 550px;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
-    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+    box-shadow: 0 0 20px 5px rgba(60, 61, 63, 0.7);
     border-radius: 20px;
     background-color: rgb(226, 229, 240);
     color: black;
@@ -34,8 +36,27 @@ p {
 }
 .counters {
     display: grid;
-    grid-template-columns: 2fr 0.4fr;
+    grid-template-rows: 2fr 0.4fr;
 }
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color: #000;
+    height: 1px;
+  }
+  #s-c {
+      display: inline-block;
+      text-align: center;
+      height: 28px;
+      width: 50px;
+      color: white;
+    background-color: rgb(57, 57, 165);
+    border-radius: 10px;
+  }
+
 .quiz-btn {
     display: grid;
     grid-template-columns: 2fr 0.3fr;
@@ -61,9 +82,12 @@ button:hover {
 #section-a {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 70px;
     max-width: 300px;
+    min-height: 150px;
+    padding-top: 40px;
     text-align: center;
-    padding: 30px 30px 30px 30px;
+    color: black;
     background-color: rgb(226, 229, 240);
     border-radius: 10px;
  }
@@ -146,5 +170,15 @@ and
     .quiz-over-btn {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+    .options {
+        text-align: start;
+        padding: 12px;
+    }.correct {
+        text-align: start;
+        padding: 12px;
+    }.wrong {
+        text-align: start;
+        padding: 12px;
     }
 }
