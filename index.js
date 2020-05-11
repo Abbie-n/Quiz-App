@@ -5,6 +5,8 @@ const nextBtn = document.getElementById('next');
 const options = document.getElementById('main-quiz-container').children;
 const quizOverText1 = document.getElementById('over-text-1');
 const quizOverText2 = document.getElementById('over-text-2');
+const emoji = document.getElementById('emoji');
+
 //
 startQuizBtn.addEventListener('click', startQuiz);
 
@@ -20,7 +22,6 @@ function startQuiz() {
 //function to restart the quiz
 function restartQuiz() {
     document.getElementById('quiz-over').classList.add('hide');
-    document.getElementById('header').classList.add('hide');
     questionSection.classList.remove('hide');
     nextBtn.classList.add('hide');
     questionsCounter = 0;
@@ -62,7 +63,7 @@ function choose(element) {
 
     for (let i = 0; i < questions.length; i++) {
         if (questionsCounter == i && element.id == questions[i].answer) {
-            scoreCounter += 1;
+            scoreCounter += 20;
             score = document.getElementById('s-c').innerHTML = scoreCounter;
         } else {
             element.classList.remove('options');
@@ -89,19 +90,26 @@ function lockOptions() {
 
 //function to give feedback when quiz is over
 function quizOver() {
-    document.getElementById('header').classList.remove('hide');
     questionSection.classList.add('hide');
 
     document.getElementById('quiz-over').classList.remove('hide');
-    if (scoreCounter <= 2) {
+    if (scoreCounter == 0) {
+        quizOverText1.innerHTML = 'Oooops!';
+        emoji.innerHTML = '😟'
+        quizOverText2.innerHTML = 'You Got Zero points!';
+    }
+    else if (scoreCounter <= 40) {
         quizOverText1.innerHTML = 'Nice Try!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' / ' + questions.length;
-    } else if (scoreCounter <= 4) {
+        emoji.innerHTML = '🙂'
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' points!';
+    } else if (scoreCounter <= 80) {
         quizOverText1.innerHTML = 'Brilliant!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' / ' + questions.length;
+        emoji.innerHTML = '😀'
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' points!';
     } else {
         quizOverText1.innerHTML = 'Just Like A Boss!';
-        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' / ' + questions.length;
+        emoji.innerHTML = '😎'
+        quizOverText2.innerHTML = 'You Got ' + scoreCounter + ' points!';
     }
 }
 //onclick function for the next button 

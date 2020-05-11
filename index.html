@@ -13,6 +13,9 @@
         <h1>Quizathon</h1>
     </header>
     <section id="section-a">
+        <p style="font-size: 20px; font-style: italic;">Each question is 20 points! <br>100 got nothing on you 💪🏾💪🏾</p>
+        <br>
+        <br>
         <button class="start_game">Start Quiz</button>
     </section>
     <section id="section-b" class="hide">
@@ -21,7 +24,7 @@
                 <p id="q-c"></p>
             </div>
 
-            <hr>
+            <hr style="width:97%; text-align:left; margin-left:0">
 
             <div class="score-counter">
                 <p>Score: <span id="s-c"></span></p>
@@ -32,7 +35,6 @@
         </div>
 
         <div id="main-quiz-container">
-
             <div class="options" id="0" onclick="choose(this)"></div>
 
             <div class="options" id="1" onclick="choose(this)"></div>
@@ -56,7 +58,10 @@
         <div id="quiz-over" class="hide">
             <p id="over-text-1"></p>
             <br>
+            <p id="emoji" style="font-size:200px"></p>
+            <br>
             <p id="over-text-2"></p>
+            <br>
             <br>
             <div class="quiz-over-btn">
                 <button id="try-again" onclick="restartQuiz()">Try Again</button>
