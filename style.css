@@ -7,7 +7,7 @@ body {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 1em;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 header {
@@ -63,6 +63,7 @@ button:hover {
     min-height: 550px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     padding: 1em;
     box-shadow: 0 0 20px 5px rgba(60, 61, 63, 0.7);
     border-radius: 20px;
@@ -166,6 +167,9 @@ button:hover {
 @media screen and (max-device-width: 480px) and (min-device-width: 320px) {
     body {
         overflow: scroll;
+    }
+    #section-b {
+        margin-top: 0px;
     }
     #main-quiz-container {
         display: flex;

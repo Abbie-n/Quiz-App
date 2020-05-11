@@ -12,12 +12,15 @@ startQuizBtn.addEventListener('click', startQuiz);
 function startQuiz() {
     startQuizBtn.classList.add('hide');
     questionSection.classList.remove('hide');
+    document.getElementById('header').classList.add('hide');
+    startQuizBtn.classList.add('hide');
     quizBody(questionsCounter);
 
 }
 //function to restart the quiz
 function restartQuiz() {
     document.getElementById('quiz-over').classList.add('hide');
+    document.getElementById('header').classList.add('hide');
     questionSection.classList.remove('hide');
     nextBtn.classList.add('hide');
     questionsCounter = 0;
@@ -86,6 +89,7 @@ function lockOptions() {
 
 //function to give feedback when quiz is over
 function quizOver() {
+    document.getElementById('header').classList.remove('hide');
     questionSection.classList.add('hide');
 
     document.getElementById('quiz-over').classList.remove('hide');
