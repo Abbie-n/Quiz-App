@@ -31,7 +31,7 @@ hr {
     border-right: 0px;
     border-left: 0px;
     height: 1px;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid rgb(211, 205, 205);
 }
 
 button {
