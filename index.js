@@ -70,7 +70,6 @@ function randomQuestion() {
             questionIndex = random;
         }
         array.push(questionIndex);
-        console.log(array);
     }
 }
 
