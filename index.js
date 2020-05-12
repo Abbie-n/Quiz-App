@@ -1,5 +1,6 @@
+const landingPage = document.getElementById('section-a')
 const questionSection = document.getElementById('section-b');
-const startQuizBtn = document.getElementById('section-a');
+const startQuizBtn = document.getElementById('start-game');
 const eachQuestion = document.getElementById('question');
 const nextBtn = document.getElementById('next');
 const options = document.getElementById('main-quiz-container').children;
@@ -12,7 +13,7 @@ startQuizBtn.addEventListener('click', startQuiz);
 
 //function to reveal the quiz screen
 function startQuiz() {
-    startQuizBtn.classList.add('hidden');
+    landingPage.classList.add('hidden');
     questionSection.classList.remove('hidden');
     document.getElementById('header').classList.add('hidden');
     startQuizBtn.classList.add('hidden');
