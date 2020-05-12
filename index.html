@@ -13,24 +13,27 @@
         <h1>Quizathon</h1>
     </header>
     <section id="section-a">
-        <p style="font-size: 20px; font-style: italic;">Each question is 20 points! <br>100 got nothing on you 💪🏾💪🏾</p>
+        <p style="font-size: 20px; font-style: italic;">You have just <span style="color: #f3c221;">15</span> seconds to show how awesome you are. <br><br>Each question is 20 points! 100 got nothing on you. <br><br>Give them!</p>
         <br>
         <br>
         <button class="start_game">Start Quiz</button>
     </section>
-    <section id="section-b" class="hide">
+    <section id="section-b" class="hidden">
         <div class="counters">
             <div class="question-counter">
                 <p id="q-c"></p>
             </div>
-
-            <hr style="width:97%; text-align:left; margin-left:0">
-
+            
             <div class="score-counter">
                 <p>Score: <span id="s-c"></span></p>
             </div>
+            <div  id="subsection-a">
+                <div>Time Left: <span id="timer" class='timer-starts'></span></div>
+                <div id="timer-feedback" class="hidden">Time Up!</div>
+            </div>
         </div>
-        <div>
+        <hr>
+        <div >
             <p id="question"></p>
         </div>
 
@@ -45,26 +48,25 @@
         </div>
 
         <div class="quiz-btn">
-            <div class="restart">
-                <button type="reset" onclick="restart()">Home</button>
-            </div>
-
-            <div class="submit-btn hide" id="next">
+            <div class="submit-btn hidden" id="next">
                 <button type="submit" onclick="next(this)">Next</button>
             </div>
         </div>
     </section>
     <section id="section-c">
-        <div id="quiz-over" class="hide">
-            <p id="over-text-1"></p>
+        <div id="quiz-over" class="hidden">
+            <p id="over-text-1" style="font-size:25px"></p>
             <br>
-            <p id="emoji" style="font-size:200px"></p>
+            <img src="images/eyeroll.png" class="hidden" id="img1" />
+            <img src="images/smile.png"class="hidden" id="img2" />
+            <img src="images/Smiling Emoji with Eyes Opened.png" class="hidden"  id="img3"/>
+            <img src="images/boss.jpg" class="hidden" id="img4" />
             <br>
-            <p id="over-text-2"></p>
+            <p id="over-text-2" style="font-size:25px"></p>
             <br>
             <br>
             <div class="quiz-over-btn">
-                <button id="try-again" onclick="restartQuiz()">Try Again</button>
+                <!-- <button id="try-again" onclick="restartQuiz()">Try Again</button> -->
                 <button onclick="restart()">Home</button>
             </div>
         </div>

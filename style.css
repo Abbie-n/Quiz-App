@@ -2,16 +2,20 @@
     box-sizing: border-box;
 }
 
+html {
+    background: url('images/background2.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
 body {
-    background-color: rgb(15, 15, 15);
-    color: white;
+    color: #f3c221;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 1em;
     overflow: hidden;
 }
 
 header {
-    margin-top: 5%;
+    margin-top: 10%;
     text-align: center;
     font-size: 30px;
 }
@@ -22,19 +26,20 @@ p {
 }
 
 hr {
-    border: 0;
-    clear: both;
-    display: block;
-    width: 100%;
-    background-color: #000;
+    margin-top: -30px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
     height: 1px;
+    border-bottom: 2px solid #000000;
 }
 
 button {
     cursor: pointer;
-    padding: 1.5em;
-    width: 110px;
-    background-color: rgb(57, 57, 165);
+    padding: 1em;
+    width: 180px;
+    font-size: 25px;
+    background-color: #e6ae1a;
     color: white;
     border: 0;
     outline: none;
@@ -42,34 +47,44 @@ button {
 }
 
 button:hover {
-    background-color: rgb(75, 75, 192);
+    background-color: #c79b09;
+}
+
+img {
+    height: 270px;
+    margin-left: -8px;
+    margin-bottom: 20px;
 }
 
 #section-a {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 70px;
+    margin-top: 30px;
     min-width: 150px;
-    max-width: 500px;
+    max-width: 600px;
     min-height: 250px;
     padding-top: 40px;
     text-align: center;
-    color: black;
-    background-color: rgb(226, 229, 240);
+    color: white;
     border-radius: 10px;
 }
 
 #section-b {
     max-width: 900px;
-    min-height: 550px;
+    min-height: 500px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 55px;
+    border: 3px solid rgb(211, 205, 205);
     padding: 1em;
-    box-shadow: 0 0 20px 5px rgba(60, 61, 63, 0.7);
+    /* box-shadow: 0 0 20px 5px rgba(60, 61, 63, 0.7); */
     border-radius: 20px;
-    background-color: rgb(226, 229, 240);
-    color: black;
+    color: #f3c221;
+}
+
+#section-b button {
+    width: 120px;
+    font-size: 20px;
 }
 
 #section-b>* {
@@ -77,61 +92,100 @@ button:hover {
 }
 
 #section-c {
-    max-width: 500px;
-    min-height: 250px;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
 
+#timer-feedback {
+    margin-top: 7px;
+    font-size: 25px;
+    color: red;
+}
 
 #main-quiz-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.counters {
-    display: grid;
-    grid-template-rows: 2fr 0.4fr;
-}
-
 #s-c {
-    display: inline-block;
     text-align: center;
-    height: 28px;
-    width: 50px;
-    color: white;
-    background-color: rgb(57, 57, 165);
-    border-radius: 10px;
+    color: #ffffff;
 }
 
-.quiz-btn {
-    display: grid;
-    grid-template-columns: 2fr 0.37fr;
+#q-c {
+    color: #ffffff;
+}
+
+#subsection-a {
+    text-align: center;
+    font-size: 25px;
+}
+
+#next button {
+    width: 200px;
 }
 
 #quiz-over {
     margin-left: auto;
     margin-right: auto;
-    max-width: 300px;
+    max-width: 500px;
     text-align: center;
-    color: black;
-    padding: 20px;
-    background-color: rgb(226, 229, 240);
+    color: #f3c221;
+    padding: 10px;
     border-radius: 10px;
+}
+
+#quiz-over button {
+    text-align: center;
+    height: 70px;
 }
 
 #over-text {
     margin-bottom: 20px;
 }
-#emoji {
-    margin-left: -8px;
-}
+
 #try-again {
     margin-right: 20px;
 }
 
-.hide {
+.counters {
+    display: grid;
+    grid-template-columns: 2fr 1.7fr 1fr;
+}
+
+.quiz-btn {
+    text-align: center;
+}
+
+.quiz-over-btn {
+    text-align: center;
+    /* display: grid;
+    grid-template-columns: 1fr .5fr; */
+}
+
+.quiz-over-btn button {
+    width: 200px;
+    font-size: 20px;
+}
+
+.timer-starts {
+    border-radius: 40%;
+    color: rgb(14, 221, 14);
+    text-align: center;
+    padding: 0.5rem;
+    margin-right: 5px;
+}
+
+.timer-end {
+    border-radius: 40%;
+    color: rgb(248, 6, 6);
+    text-align: center;
+    padding: 0.5rem;
+    margin-right: 5px;
+}
+
+.hidden {
     display: none;
 }
 
@@ -139,19 +193,16 @@ button:hover {
     margin-right: 20px;
     margin-bottom: 20px;
     font-size: 1.5rem;
-    color: black;
+    color: #f3c221;
     padding: 20px;
     border-radius: 10px;
-    border-bottom: 1px solid black;
-    float: left;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    border: 1px solid gray;
+    text-align: center;
 }
 
 .options:hover {
     cursor: pointer;
-    background-color: rgb(193, 193, 218);
+    background-color: rgb(114, 119, 101);
 }
 
 .correct {
@@ -163,6 +214,8 @@ button:hover {
     background-color: rgb(11, 197, 11);
     color: white;
     border: none;
+    text-align: center;
+    animation: correct 1s linear;
 }
 
 .wrong {
@@ -173,13 +226,45 @@ button:hover {
     padding: 20px;
     background-color: rgb(226, 19, 19);
     color: white;
+    text-align: center;
     border: none;
+    animation: wrong 1s linear;
 }
 
 .disabled {
     font-size: 1.5rem;
     padding: 20px;
     pointer-events: none;
+}
+
+@keyframes correct {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes wrong {
+    0%, 30%, 50% {
+        transform: translateY(10px);
+    }
+    20%, 40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateX(10px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 @media screen and (max-device-width: 480px) and (min-device-width: 320px) {
@@ -196,12 +281,12 @@ button:hover {
     #emoji {
         margin-left: -20px;
     }
-    .quiz-btn button {
-        width: 80px;
+    #next button {
+        width: 200px;
     }
-    .quiz-over-btn {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .quiz-over-btn button {
+        width: 120px;
+        font-size: 18px;
     }
     .options {
         text-align: start;
@@ -214,5 +299,11 @@ button:hover {
     .wrong {
         text-align: start;
         padding: 12px;
+    }
+    .counters {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
     }
 }
